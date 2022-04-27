@@ -2,4 +2,10 @@
 import os
 
 print('Hello World')
-print(os.environ)
+for e in os.environ:
+  print(e)
+print('---')
+
+with open(os.environ['GITHUB_EVENT_PATH]') as f:
+  s = f.read()
+  print(s)

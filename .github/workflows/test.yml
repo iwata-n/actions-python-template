@@ -10,6 +10,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Script
+        uses: actions/script@v3
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            console.log(context.pull_request)
+            return context.pull_request.title
       - name: Run
         uses: iwata-n/actions-python-template@main
         with:

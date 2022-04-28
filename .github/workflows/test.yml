@@ -20,7 +20,7 @@ jobs:
             return context.payload.pull_request.title
       - name: Output
         id: test
-        run: echo ::set-output name::result=12345
+        run: echo "::set-output name::result=12345"
       - name: Echo
         uses: actions/github-script@v3
         with:

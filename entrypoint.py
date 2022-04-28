@@ -9,3 +9,5 @@ print('---')
 with open(os.environ['GITHUB_EVENT_PATH']) as f:
   s = f.read()
   print(s)
+
+print('---')
